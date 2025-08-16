@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id = "alien" class = "org.aryan.Alien" autowire="byName">
+
+<!--        <constructor-arg index="1" ref="laptop1"/>-->
+<!--        <constructor-arg index="0" value="21"/>-->
+<!--        <constructor-arg type="org.aryan.Laptop" ref = "laptop1"/>-->
+<!--        <constructor-arg type="int" value="21"/>-->
+
+<!--        <constructor-arg name="age" value="21"/>-->   
+<!--        <constructor-arg name="laptop" ref="laptop1"/>-->
+
+        <!--        <property name="laptop" ref="laptop1"/>-->
+        
+        <property name="age" value="21"/>
+<!--        <property name="com" ref = "laptop1"/>-->
+
+    </bean>
+
+
+
+<!--    <bean id = "com" class = "org.aryan.Laptop"/>-->
+    <bean id = "com1" class = "org.aryan.Desktop">
+
+    </bean>
+
+</beans>
