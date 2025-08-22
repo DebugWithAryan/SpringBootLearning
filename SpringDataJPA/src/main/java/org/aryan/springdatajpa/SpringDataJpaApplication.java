@@ -20,34 +20,42 @@ public class SpringDataJpaApplication {
         Student s2 = context.getBean(Student.class);
         Student s3 = context.getBean(Student.class);
 
-        s1.setEnrollmentNo(101);
-        s1.setName("Aryan");
-        s1.setMarks(98);
-
+//        s1.setEnrollmentNo(101);
+//        s1.setName("Aryan");
+//        s1.setMarks(98);
+//
         s2.setEnrollmentNo(102);
         s2.setName("Abhishek");
-        s2.setMarks(97);
-
+        s2.setMarks(77);
+//
         s3.setEnrollmentNo(103);
         s3.setName("Abhyud");
         s3.setMarks(56);
+//
+//        repo.save(s1);
+//        repo.save(s2);
+//        repo.save(s3);
+//
+//        System.out.println("Save Done");
+//
+//        System.out.println(repo.findAll());
+//
+//        System.out.println("Find All Done");
+//
+//        System.out.println(repo.findById(103));
+//
+//        System.out.println("find By EnrollmentNo Done");
+//
+//        Optional<Student> s = repo.findById(104);
+//        System.out.println(s.orElse(new Student()));
+//
+//        System.out.println(repo.findByName("Aryan"));
+//        System.out.println(repo.findByMarks(98));
+//        System.out.println(repo.findByMarksGreaterThan(18));
 
-        repo.save(s1);
         repo.save(s2);
-        repo.save(s3);
+        repo.delete(s3);
 
-        System.out.println("Save Done");
-
-        System.out.println(repo.findAll());
-
-        System.out.println("Find All Done");
-
-        System.out.println(repo.findById(103));
-
-        System.out.println("find By EnrollmentNo Done");
-
-        Optional<Student> s = repo.findById(104);
-        System.out.println(s.orElse(new Student()));
     }
 
 }

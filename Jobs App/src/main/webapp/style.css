@@ -1,20 +1,39 @@
 body {
-    background-color:#1e96fc; /* Bootstrap primary blue */
-    color: #fff; /* Text color for better contrast on the blue background */
-
+    background-color: #212529; /* Dark gray for a sleek look */
+    color: #f8f9fa; /* Light text for contrast */
 }
+
 .navbar-nav .nav-link {
-    font-size: 18px; /* Adjust the font size as needed */
+    font-size: 18px;
+    color: #f8f9fa !important; /* Ensure nav links are light */
 }
+
 .container {
-    border-radius: 5px; /* Optional: Add some border-radius for a softer look */
+    border-radius: 5px;
     padding: 20px;
-    margin-top: 50px; /* Adjust the margin as needed */
+    margin-top: 50px;
 }
 
-.cdClass{
-    background-color: #ffffff;
-    border-radius: 10px;
+.cdClass, .card {
+    background-color: #343a40; /* Slightly lighter dark gray for cards */
+    color: #f8f9fa;
+    border: 1px solid #495057; /* A subtle border */
 }
 
+.card-title {
+    color: #17a2b8; /* A splash of color for titles */
+}
 
+.card-text strong {
+    color: #fd7e14; /* Another color for bold text */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}

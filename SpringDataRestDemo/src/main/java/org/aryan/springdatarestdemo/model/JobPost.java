@@ -1,4 +1,5 @@
-package org.aryan.jobsapp.model;
+package org.aryan.springdatarestdemo.model;
+
 
 import jakarta.persistence.Convert;
 import jakarta.persistence.ElementCollection;
@@ -7,7 +8,7 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.aryan.jobsapp.converter.StringListConverter;
+import org.aryan.springdatarestdemo.converter.StringListConverter;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -15,8 +16,8 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Component
 @Entity
+@Component
 public class JobPost {
     @Id
     private int postId;

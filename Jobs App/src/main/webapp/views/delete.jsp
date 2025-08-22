@@ -1,23 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" isELIgnored="false"%>
-
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Post List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Delete Job</title>
+
     <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
 </head>
 <body>
-
 
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
     <div class="container">
@@ -39,41 +37,24 @@
     </div>
 </nav>
 
-
 <div class="container mt-5">
-    <h2 class="mb-4 text-center font-weight-bold">Job Post List</h2>
-    <div class="row row-cols-2">
-        <c:forEach var="jobPost" items="${jobPosts}">
-            <div class="col mb-4">
-                <div class="card border-dark bg-dark text-white">
-                    <div class="card-body">
-                        <h5 class="card-title">${jobPost.postProfile}</h5>
-                        <p class="card-text">
-                            <strong>Description:</strong>
-                                ${jobPost.postDesc}
-                        </p>
-                        <p class="card-text">
-                            <strong>Experience Required:</strong>
-                                ${jobPost.reqExperience} years
-                        </p>
-                        <p class="card-text">
-                            <strong>Tech Stack:</strong>
-                        <ul>
-                            <c:forEach var="tech" items="${jobPost.postTechStack}">
-                                <li>${tech}</li>
-                            </c:forEach>
-                        </ul>
-                        </p>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <a href="updatejob/${jobPost.postId}" class="btn btn-sm btn-info">Update</a>
-                        <a href="deletejob/${jobPost.postId}" class="btn btn-sm btn-danger">Delete</a>
-                    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h2 class="mb-3">Are you sure you want to delete this job post?</h2>
+                    <p class="card-text">Deleting this job post is permanent and cannot be undone.</p>
+                    <form action="/deleteJob" method="post">
+                        <input type="hidden" name="postId" value="${jobPost.postId}">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <a href="javascript:history.back()" class="btn btn-secondary">Cancel</a>
+                    </form>
                 </div>
             </div>
-        </c:forEach>
+        </div>
     </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

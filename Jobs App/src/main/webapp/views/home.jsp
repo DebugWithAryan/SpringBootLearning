@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Telusko Job Portal</title>
+    <title>Aryan Job Portal</title>
 
 
     <link
@@ -38,7 +38,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="https://portfolio-vert-nine-33.vercel.app/">Contact</a>
+                    <a class="nav-link" href="https://aryan-pi.vercel.app/">Contact</a>
                 </li>
             </ul>
         </div>
@@ -47,7 +47,17 @@
 
 <div class="container mt-5">
     <div class="row">
-        <!-- Card 1 -->
+
+        <div class="row mb-4">
+            <div class="col-md-8 offset-md-2">
+                <form action="viewalljobs" method="get" class="d-flex">
+                    <input class="form-control me-2" type="search" name="keyword" placeholder="Search jobs..." aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body text-center">
@@ -56,7 +66,6 @@
             </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body text-center">
